@@ -1,0 +1,36 @@
+.container {
+  width: fit-content;
+  margin: 50px auto;
+  position: relative;
+}
+
+.slide {
+  height: 400px;
+  width: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.icoaction {
+  height: 60px;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgb(0, 229, 255);
+  /* border: px solid gray; */
+  border-radius: 20px;
+  mix-blend-mode: lighten;
+}
+
+.icoprev {
+  left: 0;
+}
+
+.iconext {
+  right: 0;
+}
+
+.iconext:hover {
+  transform: scale(0.8) translateX(10px);
+}

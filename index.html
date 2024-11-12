@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css">  
+  </head>
+  <body>
+    <div class="container">
+      <img src="imgs/bmw1.jpg" class="slide" id="slide" />
+  
+      <img src="icon/left-arrow.png" class="icoaction icoprev" onclick="prev()" />
+      <img src="icon/right-arrow.png" class="icoaction iconext" onclick="next()" />
+    </div>
+
+    <script>
+      const images = [
+        "imgs/amg.jpg",
+        "imgs/bmw.jpg",
+        "imgs/sport-car.jpg",
+        "imgs/images.jpg",
+        "imgs/range-rover.jpg"
+       
+      ];
+
+      let index = 0;
+      const slide = document.getElementById("slide");
+
+      function next() {
+        if (index < images.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+
+        slide.src = images[index];
+      }
+
+      function prev() {
+        if (index > 0) {
+          index--;
+        } else {
+          index = images.length - 1;
+        }
+
+        slide.src = images[index];
+      }
+      setInterval(next,4000)
+    </script>
+  </body>
+</html>
